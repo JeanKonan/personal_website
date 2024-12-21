@@ -1,0 +1,50 @@
+$blue: #0B223D;
+$orange: #FB8500;
+$white: #EDF2FB;
+$skyblue: #7DCBFF;
+
+$font-weight-strong: 600 !default;
+$font-size-h1: 2rem !default;
+$font-size-h2: 1.5rem !default;
+$font-size-h3: 1.3rem !default;
+$font-size-h4: 1.15rem !default;
+$font-size-text: 1rem !default;
+
+$font-title: 'Cookie';
+$font-text: 'Noto Sans';
+
+$colors: (
+    primary: $blue,
+    secondary: $orange,
+    tertiary: $skyblue,
+    background: $white
+);
+
+$font-size: (
+    h1: $font-size-h1,
+    h2: $font-size-h2,
+    h3: $font-size-h3,
+    h4: $font-size-h4,
+    text: $font-size-text
+);
+
+$font-family: (
+    title: $font-title,
+    text: $font-text
+);
+
+:root {
+    @each $key, $color in $colors {
+        --#{$key}-color: #{$color};
+    }
+
+    @each $key, $size in $font-size {
+        --#{$key}-font-size: #{$size};
+    }
+
+    @each $key, $font in $font-family {
+        --#{$key}-font: #{$font};
+    }
+
+    --link-color: $orange;
+}
